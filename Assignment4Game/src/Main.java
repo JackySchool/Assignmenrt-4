@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        JFrame MainGame = new JFrame("Blev adventures Pt.3");
+        JFrame MainGame = new JFrame("Blev adventures 3: Attack of the rollercoaster");
 
         //--------------------OptionPane
         JPanel OptionPane = new JPanel(new FlowLayout(), false);

@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        JFrame MainGame = new JFrame("Blev adventures 3: Attack of the rollercoaster");
+        JFrame MainGame = new JFrame("Blev adventures 3: Surviving Blev Park!");
 
         //--------------------OptionPane
         JPanel OptionPane = new JPanel(new FlowLayout(), false);
@@ -30,9 +30,13 @@ public class Main {
         JButton Option2Button = new JButton("Option 2");
         JButton Option3Button = new JButton("Option 3");
 
-        //--------------------Other
-        JProgressBar Health = new JProgressBar(0, 100);
-
+        //--------------------HealthBar
+        JProgressBar HealthBar = new JProgressBar(0, 100);
+        HealthBar.setString("Health");
+        HealthBar.setForeground(Color.GREEN);
+        HealthBar.setBackground(Color.DARK_GRAY);
+        HealthBar.setStringPainted(true);
+        HealthBar.setValue(90);
         //--------------------Icons
         JLabel Scene = new JLabel(new ImageIcon("sus-among-us.gif"));
         ImageIcon Icon = new ImageIcon("Logo.png");
@@ -42,8 +46,6 @@ public class Main {
         MainGame.getContentPane().setBackground(Color.BLACK);
         MainGame.setIconImage(Icon.getImage());
         MainGame.setLayout(new BorderLayout());
-
-        
 
         //------------Adding items
         MainGame.add(OptionPane, BorderLayout.SOUTH);
@@ -55,7 +57,7 @@ public class Main {
         OptionPane.add(Option2Button, FlowLayout.CENTER);
         OptionPane.add(Option3Button, FlowLayout.RIGHT);
 
-        StatsPane.add(Health, FlowLayout.LEFT);
+        StatsPane.add(HealthBar, FlowLayout.LEFT);
 
         MainGame.setVisible(true);
     }

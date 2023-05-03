@@ -8,6 +8,16 @@ public class Main {
     public static void main(String[] args) throws Exception {
         JFrame MainGame = new JFrame("Blev adventures 3: Surviving Blev Park!");
 
+        //--------------------Variables
+        int PlayerHealth = 100;
+        int PlayerDamage = 1;
+        int PlayerDefense = 5;
+        int PlayerCash = 0;
+        String PlayerWeapon = "Stick";
+
+        String Damage = String.valueOf(PlayerDamage);
+        String Defence = String.valueOf(PlayerDefense);
+        String Cash = String.valueOf(PlayerCash);
         //--------------------OptionPane
         JPanel OptionPane = new JPanel(new FlowLayout(), false);
         OptionPane.setForeground(Color.WHITE);
@@ -19,7 +29,7 @@ public class Main {
         StatsPane.setBackground(Color.BLACK);
 
         //--------------------TextArea
-        JTextArea TextArea = new JTextArea("swagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswagswag", 30, 30);
+        JTextArea TextArea = new JTextArea("", 30, 30);
         TextArea.setEditable(false);
         TextArea.setLineWrap(true);
         TextArea.setForeground(Color.WHITE);
@@ -36,7 +46,23 @@ public class Main {
         HealthBar.setForeground(Color.GREEN);
         HealthBar.setBackground(Color.DARK_GRAY);
         HealthBar.setStringPainted(true);
-        HealthBar.setValue(90);
+        HealthBar.setValue(PlayerHealth);
+        //--------------------PlayerStatLabels
+        JLabel DamageLabel = new JLabel(" >Damage: " + Damage + "< ");
+        DamageLabel.setForeground(Color.WHITE);
+        DamageLabel.setBackground(Color.DARK_GRAY);
+
+        JLabel DefenceLabel = new JLabel(" >Defence: " + Defence + "< ");
+        DefenceLabel.setForeground(Color.WHITE);
+        DefenceLabel.setBackground(Color.DARK_GRAY);
+
+        JLabel CashLabel = new JLabel(" >Cash: " + Cash + "< ");
+        CashLabel.setForeground(Color.WHITE);
+        CashLabel.setBackground(Color.DARK_GRAY);
+
+        JLabel WeaponLabel = new JLabel(" >Weapon: " + PlayerWeapon + "< ");
+        WeaponLabel.setForeground(Color.WHITE);
+        WeaponLabel.setBackground(Color.DARK_GRAY);
         //--------------------Icons
         JLabel Scene = new JLabel(new ImageIcon("sus-among-us.gif"));
         ImageIcon Icon = new ImageIcon("Logo.png");
@@ -58,7 +84,13 @@ public class Main {
         OptionPane.add(Option3Button, FlowLayout.RIGHT);
 
         StatsPane.add(HealthBar, FlowLayout.LEFT);
+        StatsPane.add(DamageLabel, FlowLayout.LEFT);
+        StatsPane.add(DefenceLabel, FlowLayout.LEFT);
+        StatsPane.add(CashLabel, FlowLayout.LEFT);
+        StatsPane.add(WeaponLabel, FlowLayout.LEFT);
 
         MainGame.setVisible(true);
+        TextArea.setText("Among usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong us");
+        //---------------------------------------------Main Game
     }
 }

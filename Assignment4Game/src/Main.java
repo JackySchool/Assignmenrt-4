@@ -29,16 +29,18 @@ public class Main {
         StatsPane.setBackground(Color.BLACK);
 
         //--------------------TextArea
-        JTextArea TextArea = new JTextArea("", 30, 30);
+        JTextArea TextArea = new JTextArea("", 24, 24);
         TextArea.setEditable(false);
         TextArea.setLineWrap(true);
+        TextArea.setFont(new Font("serif", Font.PLAIN, 20));
+        TextArea.setWrapStyleWord(true);
         TextArea.setForeground(Color.WHITE);
         TextArea.setBackground(Color.BLACK);
 
         //--------------------Buttons
-        JButton Option1Button = new JButton("Option 1");
-        JButton Option2Button = new JButton("Option 2");
-        JButton Option3Button = new JButton("Option 3");
+        JButton Option1Button = new JButton("");
+        JButton Option2Button = new JButton("");
+        JButton Option3Button = new JButton("");
 
         //--------------------HealthBar
         JProgressBar HealthBar = new JProgressBar(0, 100);
@@ -72,6 +74,8 @@ public class Main {
         MainGame.getContentPane().setBackground(Color.BLACK);
         MainGame.setIconImage(Icon.getImage());
         MainGame.setLayout(new BorderLayout());
+        MainGame.isFocusable();
+        MainGame.setResizable(false);
 
         //------------Adding items
         MainGame.add(OptionPane, BorderLayout.SOUTH);
@@ -90,7 +94,10 @@ public class Main {
         StatsPane.add(WeaponLabel, FlowLayout.LEFT);
 
         MainGame.setVisible(true);
-        TextArea.setText("Among usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong usAmong us");
         //---------------------------------------------Main Game
+
+        //TextArea.setText("You: Welcome to blev park! home of the largest streamer setup once owned by our lord and savior Tyler 'Ninja' Blevins!");
+        TextArea.setText(JLib.textreadout("swagswagswagswagswagswag"));
+        //TextArea.setText("You: Heh, what a joke... this park doesnt seem to have done very well for itself");
     }
 }

@@ -140,14 +140,74 @@ public class GUI {
         }
         switch (input) {
             case "Enter":
-            textArea.setText("You decide to enter the park after thinking long and hard... 'Curiousity killed the cat... whatever that saying means'");
+            textArea.setText("You decide to enter the park after thinking long and hard... 'Welp... I guess theres no going back now'");
+            Option1Button.setText("Go left");
+            Option2Button.setText("Go right");
+            Option3Button.setText("Go forward");
             break;
+
+            case "Go left":
+            textArea.setText("You decide to head left... along the pathway you spot a shiny quarter do you pick it up or leave it...");
+            Option1Button.setText("pick it up");
+            Option2Button.setText("leave it");
+            Option3Button.setText("");
+            break;
+
+            case "pick it up":
+            textArea.setText("You pick up the coin! +1 dollar. as you continue down your pathway you spot a epic roller coaster however its extremly run down and possibly dangerous, do you take a ride or press on");
+            PlayerCash++;
+            Option1Button.setText("ride it");
+            Option2Button.setText("press on");
+            Option3Button.setText("");
+            break;
+
+            case "leave it":
+            textArea.setText("as you continue down your pathway you spot a epic roller coaster however its extremly run down and possibly dangerous, do you take a ride or press on");
+            Option1Button.setText("ride it");
+            Option2Button.setText("press on");
+            Option3Button.setText("");
+            break;
+
+            case "ride it":
+            textArea.setText("You flip the switch and quickly hop in the cart, as you reach the top you notice a wierd spider shaped silhouette... -BEGIN FIGHT- (fighting wont be included in the alpha however it is a planned feature so stay tuned!)");
+            Option1Button.setText("");
+            Option2Button.setText("press on");
+            Option3Button.setText("");
+            break;
+
+            case "press on":
+            textArea.setText("You decide to press on, rides are overrated anyways am i right? you spot a cotton candy stand off in the distance, covered in mold and moss you check to see if it still works and what do ya know... it still runs! +10 health... theres a fork in the road, do you enter the bouncy house or do you get in the teacups ride");
+            PlayerHealth += 10;
+            Option1Button.setText("enter the house");
+            Option2Button.setText("get in the cups");
+            Option3Button.setText("");
+            break;
+
+
+
+
+
+            case "Go right":
+            
+            break;
+            case "Go forward":
+            
+            break;
+
+
+
+
+
+
+
             case "Leave":
             textArea.setText("You decide to get back in your car and leave after thinking long and hard about whats possibly to come - CHICKEN ENDING");
             break;
             case "Swag":
             textArea.setText("DEBUG MODE ACTIVATED... WHICH LINE DO YOU WANT TO SKIP TO?");
             break;
+            //------------------CHOICE ONCE
+            
         }
     }
 }

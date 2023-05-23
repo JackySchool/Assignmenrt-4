@@ -8,15 +8,15 @@ import java.util.*;
 
 
 public class GUI {
-    int PlayerHealth;
-    int PlayerDamage;
-    int PlayerDefense;
-    int PlayerCash;
-    String PlayerWeapon;
+    private int PlayerHealth;
+    private int PlayerDamage;
+    private int PlayerDefense;
+    private int PlayerCash;
+    private String PlayerWeapon;
 
-    String Damage;
-    String Defence;
-    String Cash;
+    private String Damage;
+    private String Defence;
+    private String Cash;
 
     JFrame MainGame;
     JPanel OptionPane;
